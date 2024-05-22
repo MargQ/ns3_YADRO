@@ -154,11 +154,12 @@ Simulator::Destroy();
 ## Список литературы
 
 - Установка и сборка ns-3
+
 [Документация](https://www.nsnam.org/docs/release/3.41/tutorial/ns-3-tutorial.pdf) по установке и сборке ns-3 находится в ns-3 Tutorial. 
 
 - Документация по модулю LTE
 
-Полная [документация])(https://www.nsnam.org/docs/models/html/lte.html) по модулю LTE для ns-3.
+Полная [документация](https://www.nsnam.org/docs/models/html/lte.html) по модулю LTE для ns-3.
 
 - Файл "основа" (п. 19.2.3)
 
