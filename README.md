@@ -67,10 +67,10 @@ cd ns-3-dev
 
 ## Результат
 
-Задание в процессе
-
 Полученные данные(ключевые характеристики с RLC и MAC уровня):
-* [MAC для DL]()
-* [RLC для DL]()
-* [Rlc для Ul]()
-* [MAC для Ul]()
+* [MAC для DL](https://github.com/MargQ/ns3_YADRO/blob/master/DlMacStats.txt)
+* [RLC для DL](https://github.com/MargQ/ns3_YADRO/blob/master/DlRlcStats.txt)
+* [Rlc для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/UlRlcStats.txt)
+* [MAC для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/UlMacStats.txt)
+
+* [Посчитанный Throughput для каждого пользователя:](https://github.com/MargQ/ns3_YADRO/blob/master/thrpt.png)
