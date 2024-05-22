@@ -149,3 +149,25 @@ Simulator::Destroy();
 * [MAC для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/UlMacStats.txt)
 
 * [Посчитанный Throughput для каждого пользователя](https://github.com/MargQ/ns3_YADRO/blob/master/thrpt.png)
+
+
+## Список литературы
+
+- Установка и сборка ns-3
+[Документация](https://www.nsnam.org/docs/release/3.41/tutorial/ns-3-tutorial.pdf) по установке и сборке ns-3 находится в ns-3 Tutorial. 
+
+- Документация по модулю LTE
+
+Полная [документация])(https://www.nsnam.org/docs/models/html/lte.html) по модулю LTE для ns-3.
+
+- Файл "основа" (п. 19.2.3)
+
+В разделе 19.2.3 документации по LTEсодержится [информация о создании и использовании стандартной программы](https://www.nsnam.org/docs/models/html/lte.html) для сценариев LTE в ns-3.
+
+- Описание параметров таблицы (п. 19.2.6)
+
+В разделе 19.2.6 [документации по LTE](https://www.nsnam.org/docs/models/html/lte-user.html) приводится описание параметров, используемых в таблицах для анализа результатов симуляции LTE.
+
+- Реализация режима full buffer
+
+Пример кода для [реализации режима full buffer](https://www.nsnam.org/docs/models/html/lte-user.html) в LTE сценариях ns-3 можно найти в файле lena-epc-dual-stripe, описанном в данной документации. Этот файл предоставляет необходимые настройки и параметры для симуляции с использованием режима full buffer.
