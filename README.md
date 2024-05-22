@@ -73,4 +73,4 @@ cd ns-3-dev
 * [Rlc для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/UlRlcStats.txt)
 * [MAC для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/UlMacStats.txt)
 
-* [Посчитанный Throughput для каждого пользователя:](https://github.com/MargQ/ns3_YADRO/blob/master/thrpt.png)
+* [Посчитанный Throughput для каждого пользователя](https://github.com/MargQ/ns3_YADRO/blob/master/thrpt.png)
