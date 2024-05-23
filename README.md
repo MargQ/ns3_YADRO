@@ -152,22 +152,45 @@ Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign(internetDevices);
 Ipv4InterfaceContainer ueIpIface = epcHelper->AssignUeIpv4Address(NetDeviceContainer(ueDevs));
 ```
 
-### Установка приложени
+Выполняем назначение IP-адресов пользовательским устройствам (UE, User Equipment) и устанавливаем приложения на этих устройствах:
+```
+// Назначение IP-адресов для UE и установка приложений
+for (uint32_t u = 0; u < ueNodes.GetN(); ++u)
+    {
+        Ptr<Node> ueNode = ueNodes.Get(u);
+        // Устанавливаем шлюз по умолчанию для UE
+        Ptr<Ipv4StaticRouting> ueStaticRouting =
+            ipv4RoutingHelper.GetStaticRouting(ueNode->GetObject<Ipv4>());
+        ueStaticRouting->SetDefaultRoute(epcHelper->GetUeDefaultGatewayAddress(), 1);
+    }
+```
+
+### Установка приложений
 Этот код создает контейнеры для клиентских и серверных приложений:
 ```
 ApplicationContainer clientApps;
 ApplicationContainer serverApps;
 ```
-
-### Запуск симуляции
-Этот код запускает приложения и симуляцию, останавливает ее по истечении времени и завершает работу симулятора:
+### Запуск приложений
+Старт приложений через 1 секунду после начала симуляции:
 ```
 serverApps.Start(Seconds(1.0));
 clientApps.Start(Seconds(1.0));
+```
+Включаем запись трассировок (log traces) для уровней MAC и RLC соответственно:
+```
+lteHelper->EnableMacTraces();
+lteHelper->EnableRlcTraces();
+```
+
+### Запуск симуляции
+Этот код запускает симуляцию, останавливает ее по истечении времени и завершает работу симулятора:
+```
 Simulator::Stop(simTime);
 Simulator::Run();
 Simulator::Destroy();
 ```
+
 </details>
 
 ## Результат
