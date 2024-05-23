@@ -110,24 +110,30 @@ Config::SetDefault("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue(10 * 1024));
 Устанавливаем некоторые атрибуты по умолчанию для компонентов, таких как UdpClient и LteRlcUm.
 
 ### Создание сети LTE
+Создаем объекты LteHelper и PointToPointEpcHelper для управления LTE сетью и эмуляции EPC:
 ```
 Ptr<LteHelper> lteHelper = CreateObject<LteHelper>();
 Ptr<PointToPointEpcHelper> epcHelper = CreateObject<PointToPointEpcHelper>();
 lteHelper->SetEpcHelper(epcHelper);
 lteHelper->SetSchedulerType("ns3::PfFfMacScheduler");
 ```
-Этот код создает объекты LteHelper и PointToPointEpcHelper для управления LTE сетью и эмуляции EPC.
+
+Настраиваем тип планировщика пакетов `pf-ff-mac-scheduler`:
+```
+lteHelper->SetSchedulerType("ns3::PfFfMacScheduler");
+```
 
 ### Создание узлов и установка соединений
+Создаем контейнеры узлов для удаленного хоста, eNB и UE:
 ```
 NodeContainer remoteHostContainer;
 remoteHostContainer.Create(1);
 NodeContainer enbNodes;
 NodeContainer ueNodes;
 ```
-Этот код создает контейнеры узлов для удаленного хоста, eNB и UE.
 
 ### Установка мобильности и сетевых устройств
+Устанавливаем модель мобильности и сетевые устройства для узлов eNB и UE:
 ```
 MobilityHelper mobility;
 mobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
@@ -138,23 +144,23 @@ NetDeviceContainer ueDevs;
 enbDevs = lteHelper->InstallEnbDevice(enbNodes);
 ueDevs = lteHelper->InstallUeDevice(ueNodes);
 ```
-Этот код устанавливает модель мобильности и сетевые устройства для узлов eNB и UE.
 
 ### Настройка IP адресов и маршрутизации
+Этот код назначает IP адреса и устанавливает маршруты для узлов:
 ```
 Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign(internetDevices);
 Ipv4InterfaceContainer ueIpIface = epcHelper->AssignUeIpv4Address(NetDeviceContainer(ueDevs));
 ```
-Этот код назначает IP адреса и устанавливает маршруты для узлов.
 
-### Установка приложений
+### Установка приложени
+Этот код создает контейнеры для клиентских и серверных приложений:
 ```
 ApplicationContainer clientApps;
 ApplicationContainer serverApps;
 ```
-Этот код создает контейнеры для клиентских и серверных приложений.
 
 ### Запуск симуляции
+Этот код запускает приложения и симуляцию, останавливает ее по истечении времени и завершает работу симулятора:
 ```
 serverApps.Start(Seconds(1.0));
 clientApps.Start(Seconds(1.0));
@@ -162,7 +168,6 @@ Simulator::Stop(simTime);
 Simulator::Run();
 Simulator::Destroy();
 ```
-Этот код запускает приложения и симуляцию, останавливает ее по истечении времени и завершает работу симулятора.
 </details>
 
 ## Результат
