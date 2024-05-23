@@ -142,13 +142,13 @@ Simulator::Destroy();
 
 ## Результат
 
-Полученные данные(ключевые характеристики с RLC и MAC уровня):
+- Полученные данные(ключевые характеристики с RLC и MAC уровня):
 * [MAC для DL](https://github.com/MargQ/ns3_YADRO/blob/master/src/DlMacStats.txt)
 * [RLC для DL](https://github.com/MargQ/ns3_YADRO/blob/master/src/DlRlcStats.txt)
-* [Rlc для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/src/UlRlcStats.txt)
+* [RLC для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/src/UlRlcStats.txt)
 * [MAC для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/src/UlMacStats.txt)
 
-* [Посчитанный Throughput для каждого пользователя](https://github.com/MargQ/ns3_YADRO/blob/master/src/thrpt.png)
+- Посчитанный [Throughput](https://github.com/MargQ/ns3_YADRO/blob/master/src/thrpt.png) для каждого пользователя
 
 
 ## Список литературы
