@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
     Config::SetDefault("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue(10 * 1024));
     
     // Конфигурация модели
-    uint16_t numNodePairs = 2;
     Time simTime = Seconds(10.0);  // время симуляции
     bool epc = true;
     bool disableDl = false;
