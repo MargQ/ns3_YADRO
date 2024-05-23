@@ -66,6 +66,31 @@ cd ns-3-dev
 ## Описание кода
 <details><summary>Описание минимального LTE сценария</summary>
 
+### Начальный шаблон
+Основа кода взята из [документации](https://www.nsnam.org/docs/models/html/lte.html)
+```
+#include <ns3/core-module.h>
+#include <ns3/network-module.h>
+#include <ns3/mobility-module.h>
+#include <ns3/lte-module.h>
+#include <ns3/applications-module.h>
+#include <ns3/config-store-module.h>
+#include <ns3/internet-module.h>
+#include <ns3/point-to-point-module.h>
+
+using namespace ns3;
+
+NS_LOG_COMPONENT_DEFINE ("lte_example");
+
+int main(int argc, char *argv[])
+{
+```
+Определяем компонент логирования, в данном случае это `lte_example`
+```
+NS_LOG_COMPONENT_DEFINE ("lte_example");
+```
+
+
 ### Конфигурация модели
 ```
 Time simTime = Seconds(10.0);
