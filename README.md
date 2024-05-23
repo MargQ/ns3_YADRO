@@ -1,5 +1,5 @@
 
-# Тестовое задание для AME
+# Тестовое задание для AME (Инженер-исследователь по разработке алгоритмов)
 #### Версия NS: ns-3-dev
 #### Используемые языки: C++, Python
 
@@ -52,10 +52,8 @@ cd ns-3-dev
 ```
  ./test.py
 ```
-
 </details>
 
-## Создание своего скрипта
 <details><summary> Пример использование своего скрипта</summary>
 
 * Создаем свой файл в папке scratch. Запускаем командой:
@@ -66,6 +64,7 @@ cd ns-3-dev
 </details>
 
 ## Описание кода
+<details><summary>Описание минимального LTE сценария</summary>
 
 ### Конфигурация модели
 ```
@@ -139,20 +138,23 @@ Simulator::Run();
 Simulator::Destroy();
 ```
 Этот код запускает приложения и симуляцию, останавливает ее по истечении времени и завершает работу симулятора.
+</details>
 
 ## Результат
-
-- Полученные данные(ключевые характеристики с RLC и MAC уровня):
+<details><summary>Полученный результат</summary>
+   
+- Полученные данные (ключевые характеристики с RLC и MAC уровня):
 * [MAC для DL](https://github.com/MargQ/ns3_YADRO/blob/master/src/DlMacStats.txt)
 * [RLC для DL](https://github.com/MargQ/ns3_YADRO/blob/master/src/DlRlcStats.txt)
 * [RLC для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/src/UlRlcStats.txt)
 * [MAC для Ul](https://github.com/MargQ/ns3_YADRO/blob/master/src/UlMacStats.txt)
 
 - Посчитанный [Throughput](https://github.com/MargQ/ns3_YADRO/blob/master/src/thrpt.png) для каждого пользователя
-
+</details>
 
 ## Список литературы
-
+<details><summary>Список использованной литературы</summary>
+   
 - Установка и сборка ns-3
 
 [Документация](https://www.nsnam.org/docs/release/3.41/tutorial/ns-3-tutorial.pdf) по установке и сборке ns-3 находится в ns-3 Tutorial. 
@@ -172,3 +174,4 @@ Simulator::Destroy();
 - Реализация режима full buffer
 
 Пример кода для [реализации режима full buffer](https://www.nsnam.org/docs/models/html/lte-user.html) в LTE сценариях ns-3 можно найти в файле lena-epc-dual-stripe, описанном в данной документации. Этот файл предоставляет необходимые настройки и параметры для симуляции с использованием режима full buffer.
+</details>
