@@ -68,7 +68,6 @@ cd ns-3-dev
 
 ### Конфигурация модели
 ```
-uint16_t numNodePairs = 2;
 Time simTime = Seconds(10.0);
 bool epc = true;
 bool disableDl = false;
