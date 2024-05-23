@@ -101,12 +101,13 @@ bool disableUl = false;
 Этот код устанавливает параметры модели, такие как количество пар узлов, время симуляции, наличие EPC и возможность отключения передачи данных в направлении DL и UL.
 
 ### Настройка атрибутов по умолчанию
+Атрибуты взяты из файла [lena-x2-handover-measures.cc](https://www.nsnam.org/docs/release/3.18/doxygen-3.18/lena-x2-handover-measures_8cc_source.html) (72-74 строки)
 ```
 Config::SetDefault("ns3::UdpClient::Interval", TimeValue(MilliSeconds(1)));
 Config::SetDefault("ns3::UdpClient::MaxPackets", UintegerValue(1000000));
 Config::SetDefault("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue(10 * 1024));
 ```
-Этот код устанавливает некоторые атрибуты по умолчанию для компонентов, таких как UdpClient и LteRlcUm.
+Устанавливаем некоторые атрибуты по умолчанию для компонентов, таких как UdpClient и LteRlcUm.
 
 ### Создание сети LTE
 ```
